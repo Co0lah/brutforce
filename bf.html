@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bf.css">
+    <title>BRUT FORCE</title>
+</head>
+
+<body>
+    <h1>BUNKER ESCAPE</h1>
+    <!-- <h2>Vous avez <span id="timer"></span> secondes pour trouver la combo et vous échapper !</h2> -->
+    <h2>Vous avez <span name="chrono" id="chrono" style="color:red"></span> secondes pour trouver
+        la combo et vous
+        échapper !</h2>
+    <div id="container">
+        <div id="left">
+            <!--  créer touche -->
+            <div id="comboDisplay">
+                <!-- insérer result combos dans le grid !! -->
+                <input type="text" id="inputCombos" readonly>
+            </div>
+            <div id="boitier">
+                <!-- implement touche en js -->
+                <button onclick="checkCombos()" id="btn-check">Check</button>
+                <button onclick="del()" id="btn-del">Del</button>
+            </div>
+            <!-- check btn -->
+        </div>
+        <!--  créer panel code -->
+        <div id="center">
+            <div id="panel-code">
+                <!-- implement code res js -->
+                <h2>Combos Test<span id="test"></span></h2>
+                <!-- todo: unshift les res  -->
+                <div class="resCombos">
+                    <p id="res"></p>
+                    <p id="success"></p>
+                    <!-- <ul id="test"></ul> -->
+                </div>
+            </div>
+        </div>
+
+        <div id="right">
+            <div id="panel-code">
+                <!-- implement code res js -->
+                <h2>Players Stats<span id="test"></span></h2>
+                <div class="playersStats">
+                    <p id="stats">score: </p>
+                    <!-- <ul id="test"></ul> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bf.js"></script>
+</body>
+
+</html>
